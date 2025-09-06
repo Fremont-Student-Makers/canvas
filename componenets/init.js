@@ -1,4 +1,4 @@
-const base = '/canvas/components/';
+const base = '/canvas/componenets/';
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
