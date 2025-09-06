@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background 0.5s, color 0.5s;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Makerspace_Stadtbibliothek_Neuss.jpg');
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fadoomer%2Fart%2FHex-Grid-Wallpaper-01-no-mask-226608871&psig=AOvVaw1afzjsZ9z_SR7RBiEt4BEv&ust=1757228993918000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCJCvkKfKw48DFQAAAAAdAAAAABAEg');
   background-repeat: repeat;
   background-size: 300px;
 }
