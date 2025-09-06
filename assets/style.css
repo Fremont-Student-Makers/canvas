@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background 0.5s, color 0.5s;
-  background-image: url('rocket_line_art.svg');
+  background-image: url('graphics/Makerspace_Stadtbibliothek_Neuss.jpg');
   background-repeat: repeat;
   background-size: 300px;
 }
