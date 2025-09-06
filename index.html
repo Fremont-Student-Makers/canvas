@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fremont Student Makers</title>
+  <!-- Place this in the <head> section -->
+  <link rel="icon" href="graphics/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+  
+<body>
+<div id="navbar-container"></div>
+  
+<section class="hero-section">
+    <h1>Fremont Student Makers</h1>
+    <p>The home of deranged psychopaths</p>
+</section>
+  
+<section id="mission" class="fade-in-section">
+  <h2>Mission</h2>
+  <p>Empowering Fremont youth through accessible STEM education, fostering innovation, collaboration, and leadership by supporting student teams, clubs, competitions, and projects.</p>
+</section>
 
+<section id="mission" class="fade-in-section">
+  <h2>Accomplishments</h2>
+  <p>TBD</p>
+</section>
+
+<section id="mission" class="fade-in-section">
+  <h2>Partners</h2>
+  <p>Untitled Rocketry</p>
+  <p>Irvington Maker Club</p>
+</section>
+  
+  <div id="footer-container"></div>
+</section>
+
+<!-- Container for the navbar -->
+
+<script type="module">
+    import { loadLayout } from './components/init.js'; // adjust path as needed
+    loadLayout(); // call it here, not in `onload`
+</script>
+
+<!--
+<script src="components/navbar.js"></script>
+  -->
+  
+<script>
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in-section');
+const options = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // fade in only once
+        }
+    });
+}, options);
+
+faders.forEach(section => {observer.observe(section);
+});
+</script>
+
+  
+</body>
+</html>
