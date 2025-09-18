@@ -58,6 +58,18 @@
                 transform: scale(1);
             }
         }
+
+        /* Fade-in animation styles */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -73,6 +85,7 @@
                 <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
                 <a href="#events" class="hover:text-sky-600 transition-colors">Events</a>
                 <a href="#donate" class="hover:text-sky-600 transition-colors">Donate</a>
+                <a href="#contact" class="hover:text-sky-600 transition-colors">Contact</a>
                 <a href="#join" class="hover:text-sky-600 transition-colors">Join</a>
             </div>
             <!-- Hamburger Icon for Mobile -->
@@ -90,6 +103,7 @@
             <a href="#projects" class="block py-3 hover:bg-gray-100 transition-colors">Projects</a>
             <a href="#events" class="block py-3 hover:bg-gray-100 transition-colors">Events</a>
             <a href="#donate" class="block py-3 hover:bg-gray-100 transition-colors">Donate</a>
+            <a href="#contact" class="block py-3 hover:bg-gray-100 transition-colors">Contact</a>
             <a href="#join" class="block py-3 hover:bg-gray-100 transition-colors">Join</a>
         </div>
     </nav>
@@ -104,7 +118,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-gray-100">
+    <section id="about" class="section-padding bg-gray-100 fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
@@ -124,16 +138,16 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-padding">
+    <section id="projects" class="section-padding fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <img src="https://placehold.co/600x400/1D4ED8/FFFFFF?text=Robotics+Arm" alt="Robotics project" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2">Irvington Maker Club</h3>
+                    <h3 class="text-2xl font-semibold mb-2">Autonomous Robotics Arm</h3>
                     <p class="text-gray-600">
-                       A student-run maker space hosting workshops and build challenges.
+                        A project focused on building and programming a robotic arm to perform complex tasks.
                     </p>
                 </div>
                 <!-- Project Card 2 -->
@@ -147,9 +161,9 @@
                 <!-- Project Card 3 -->
                 <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <img src="https://placehold.co/600x400/991B1B/FFFFFF?text=Drone" alt="Drone project" class="rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2">Untitled Rocketry</h3>
+                    <h3 class="text-2xl font-semibold mb-2">FPV Racing Drone</h3>
                     <p class="text-gray-600">
-                       A student-run rocketry team competing in the American Rocketry Challenge.
+                        An advanced project where students built and flew a first-person-view racing drone.
                     </p>
                 </div>
             </div>
@@ -157,7 +171,7 @@
     </section>
 
     <!-- Photo Carousel Section -->
-    <section class="section-padding bg-gray-100">
+    <section class="section-padding bg-gray-100 fade-in">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold text-center mb-12">Showcase Gallery</h2>
             <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
@@ -181,7 +195,7 @@
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="section-padding">
+    <section id="events" class="section-padding fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
             <div class="flex justify-center">
@@ -194,7 +208,7 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="section-padding bg-sky-600 text-white">
+    <section class="section-padding bg-sky-600 text-white fade-in">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Impact</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -215,7 +229,7 @@
     </section>
 
     <!-- Donate Section -->
-    <section id="donate" class="section-padding">
+    <section id="donate" class="section-padding fade-in">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-8">Support Our Mission</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">
@@ -225,8 +239,40 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-100 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">
+                        Have a question about our projects, events, or how to get involved? Feel free to send us a message. We'll get back to you as soon as we can!
+                    </p>
+                    <img src="https://placehold.co/400x300/4F46E5/FFFFFF?text=Contact+Us" alt="A phone and email icon" class="rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 mx-auto">
+                </div>
+                <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
+                    <form>
+                        <div class="mb-4 text-left">
+                            <label for="contact-name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                            <input type="text" id="contact-name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="contact-email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+                            <input type="email" id="contact-email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="contact-message" class="block text-gray-700 font-semibold mb-2">Your Message</label>
+                            <textarea id="contact-message" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-sky-600 text-white font-bold py-3 px-8 rounded-full hover:bg-sky-700 transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Join Section -->
-    <section id="join" class="section-padding bg-gray-100">
+    <section id="join" class="section-padding fade-in">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-8">Become a Member</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">
@@ -314,8 +360,27 @@
                 }, 5);
             };
 
-            const statsSection = document.querySelector('.section-padding.bg-sky-600');
+            // Intersection Observer for fade-in animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+
             const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Optional: stop observing once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            fadeElements.forEach(el => observer.observe(el));
+
+
+            // Intersection Observer for statistics counter
+            const statsSection = document.querySelector('.section-padding.bg-sky-600');
+            const statsObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         counters.forEach(counter => {
@@ -329,7 +394,7 @@
                 threshold: 0.5
             }); // Trigger when 50% of the section is visible
 
-            observer.observe(statsSection);
+            statsObserver.observe(statsSection);
         });
     </script>
 
